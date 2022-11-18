@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee store</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .fulllogo{
+            /* margin-left: 100px; */
+            /* border: 1px solid; */
+            margin-left: 100px;
+        }
+        .logo {
+            padding: 15px;
+            text-align: center;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: space-between;
+            /* justify-content:  */
+        }
+        .logo img{
+            width: 70px;
+            border-radius: 50%;
+            /* text-align: center; */
+            margin-right: 20px;
+        }
+        .logo h2 {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid; */
+            width: auto ;
+        }
+        .list {
+            display: flex;
+            list-style: none;
+            margin-right: 200px;
+        
+            /* border: 1px solid; */
+            height: min-content;
+            /* margin-top: 10px; */
+            font-family: cursive;
+        }
+        .list li {
+            margin: 30px;
+            margin-right: 10px;
+            margin-left: 10px;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            
+            padding: 4px;
+            background-color: rgb(207, 224, 78);
+        }
+        .searchbar {
+            display: flex;
+            /* border: 1px solid; */
+            margin-right: 70px;
+            /* margin-top: 10px; */
+        }
+        .searchbar li {
+            list-style: none;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+            /* border: 1px solid; */
+            border-radius: 50%;
+            height: 30px;
+            padding: 10px;
+            color: white;
+            background-color: rgb(197, 226, 146);
+        }
+        .searchbar img{
+            /* display: flex; */
+            /* color:; */
+            width: 30px;
+        }
+        .searchbar .search {
+            /* background-color: aliceblue; */
+            background-color: white;
+            border-radius: 0%;
+            margin-right: 0px;
+            height: 10px;
+            margin-top:20px ;
+            /* border: 4px salmon; */
+        }
+        .searchbar input {
+            height: 30px;
+            margin-top: 30px;
+            margin-right: 40px;
+            /* border: px solid; */
+            border-radius: 3%;
+            border-style:;
+            border-color: blueviolet;
+            /* border: none; */
+        }
+        /* .fullsearch {
+            display: flex;
+            border: 1px solid;
+            padding: 0;
+            height: 40px;
+            margin-top: 20px;
+        } */
+/* homepage section */
+        .home {
+            margin-top: 50px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid; */
+            border-radius: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+
+
+            /* background-color: aliceblue; */
+        }
+        .homeimage{
+            /* margin-left: 200px; */
+            text-align: center;
+        }
+        .homeimage img {
+            width:20%;
+            /* margin-top: 20px ;        */
+            height: 100%;
+            border-radius: 5%;
+            margin-top: 30px;
+            margin-right: 100px;
+         }
+        .homecontent {
+            /* margin-right: 200px; */
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            /* border: 1px solid; */
+        }
+        .homehead h1 {
+            font-size: 400%;
+            font-family:'Times New Roman', Times, serif;
+            color: rgb(206, 159, 90);
+            margin-bottom: 20px;
+        }
+        .homepara {
+            /* width: 500px; */
+            margin-left: 200px;
+            margin-right: 200px;
+            /* background-color: black; */
+        }
+        .homepara p {
+            font-style: italic;
+            font-weight: bold;
+            font-family:cursive;
+            color: rgb(183, 154, 211);
+        }
+        /* About Section  */
+        .about {
+            margin-top: 50px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid; */
+            border-radius: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .abouthead {
+            display: flex;
+            margin-left: 200px;
+            margin-right: 200px;
+            /* align-items: center; */
+            text-align: center;
+            /* width: 100px; */
+        }
+        .abouthead img {
+            width: 10%;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-left: auto;
+        }
+        .abouthead h1 {
+            margin-right: auto;
+            margin-left: 10px;
+            margin-top: 10px;
+            font-size: 60px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:rgb(223, 82, 82);
+        }
+        .aboutimg {
+            display: flex;
+            margin-top: 70px;
+        }
+        .image {
+            width: 200px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .image .img1 {
+            width: 80%;
+            border-radius: 50%;
+            /* border: 1px solid; */
+        }
+        .img2 {
+            width: 100%;
+            /* margin-right: auto;
+            margin-left: auto; */
+            border-radius: 50%;
+            /* border: 1px solid; */
+        }
+        .img3 {
+            width: 110%;
+            /* border: 1px solid; */
+            /* margin-right: auto;
+            margin-left: auto; */
+        }
+        .img4 {
+            /* border: 1px solid; */
+            /* margin-right: auto;
+            margin-left: auto; */
+        }
+    /* Contact us  */
+        .contact {
+            margin-top: 50px;
+            padding: 60px;
+            display: flex;
+            /* flex-direction: column; */
+            /* border: 2px solid; */
+            border-radius: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
+            box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .contacthead {
+            text-align: center;
+            /* margin-left: 50px; */
+        }
+        .contacthead h1{
+
+            color: blueviolet;
+        }
+        .contactform {
+            margin-top: 30px;
+            margin-right: 100px;
+         }
+        .contactform input {
+            /* height: auto; */
+            background-color: white;
+            border: none ;
+            border-bottom: 2px solid red;
+            border-radius: 5px;
+            height: 30px;
+            width: 300px;
+            margin-bottom: 19px;
+            padding: 10px;
+         }
+         .contactform textarea {
+            background-color: white;
+            border: 1px solid rgb(143, 47, 57);
+            border-radius: 5px;
+            width: 300px;
+            padding: 20px;
+         }
+         .btnf {
+            border: none;
+            padding: 10px;
+            width: 90px;
+            color: white;
+            background-color: rgb(111, 111, 180);
+            border-radius: 10px;
+            margin-top: 20px;
+         }
+        .footer{
+            margin-top: 50px;
+            margin-top: 50px;
+            padding: 60px;
+            display: flex;
+            background-color: rgb(223, 169, 169);
+            /* flex-direction: column; */
+            /* border: 2px solid; */
+            border-radius: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .footerpic img {
+            margin-left: 100px;
+            width: 150px;
+            border-right: 5px solid;
+            padding-right: 50px;
+        }
+        .footercostumer {
+            margin-left: 70px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center ;
+        }
+        .footerbox {
+            list-style: none;
+            margin-right: 100px;
+            color: aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+/* Login Section */
+        .loginsec {
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            margin-top: -140%;
+            /* margin-left: 40%; */
+            border: 1px solid;
+            width: 100%;
+            backdrop-filter:blur(8px) ;
+            padding-top: 200px;
+            padding-bottom: 200px;
+
+        }
+        .hidden {
+            display: none;
+            visibility: hidden;
+        }
+        .show {
+            display: block;
+            visibility: visible;
+        }
+        .popupbox {
+            /* position:relative; */
+            /* z-index: 1; */
+            width: 400px;
+            margin-top: 50px;
+            /* margin-top: 50px; */
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(241, 230, 230);
+            /* flex-direction: column; */
+            /* border: 2px solid; */
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            /* margin-bottom: 20px; */
+            text-align: center;
+            box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .loginhead {
+            color: rgb(88, 83, 83);
+        }
+        .login input{
+            width: 200px;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: white;
+            border: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="fulllogo">
+                    <div class="logo">
+                        <!-- <h1>Logo</h1> -->
+                        <img src="./logo.png" alt=""><label for=""><h2 style="font-family: cursive; color: brown;">My coffe Store</h2></label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!-- <li>Home</li> -->
+                    <li>Menu</li>
+                    <li>Trending</li>
+                    <li>Rewards</li>
+                    <li>Gift Cards</li>
+                    <li>About</li>
+                    <!-- <li>Buy a Coffe</li> -->
+                </div>
+                <div class="searchbar">
+                    <!-- <div class="fullsearch"> -->
+                        <li class="search"><img src="./search.png" alt=""></li>
+                        <input type="text" placeholder="search">
+                    <!-- </div> -->
+                    
+                    <li><img src="./user.png" alt=""></li>
+                    <li><img src="./shopping-bag.png" alt=""></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- home page -->
+
+    <section>
+        <div class="home">
+           
+            <div class="homecontent">
+                <div class="homehead">
+                    <h1>What's Special !!</h1>
+                </div>
+                <div class="homepara">
+                    <p>
+                        Caffeine is the first thing that comes to mind when you think about coffee. But coffee also contains antioxidants and other active substances that may reduce internal inflammation and protect against disease, say nutrition experts from Johns Hopkins University School of Medicine.
+                    </p>
+                </div>
+            </div>
+            <div class="homeimage">
+                <!-- <img src="./tea-cup-coffee-svgrepo-com.svg" alt=""> -->
+                <img src="./Coffee 05.jpg" alt="">
+                <img src="./Coffee 06.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- About Section  -->
+    <section>
+        <div class="about">
+            <div class="abouthead">
+                <img src="./coffee1.jpg" alt="">
+                <h1>Our Connections </h1>
+            </div>
+            <div class="aboutimg">
+                <div class="image">
+                    <img class="img1" src="https://c8.alamy.com/comp/2AXY8TP/starbucks-coffee-logo-2AXY8TP.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img class="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6sCEn_2zgPx_1kLtujeroeRCXp5pbISnpaON3IC_j5V0nzpUtYk7tMH2pk-V1y7aaCY&usqp=CAU" alt="">
+                </div>
+                <div class="image">
+                    <img class="img3" src="https://seeklogo.com/images/H/Hard_rock_Cafe-logo-7F8FE3C3ED-seeklogo.com.png" alt="">
+                </div>
+                <div class="image">
+                    <img class="img4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDjiuId3GB_dsePDBFWS9uJLV_nU_v-kpXszc9lP96Tj2jikeeAMt7EScRvmt6TAK9V24&usqp=CAU" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section  -->
+    <section>
+        <div class="contact">
+            <div>
+                <div class="contacthead">
+
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="contactform">
+                    <form action="">
+                        <input type="text" placeholder="Enter name"><br>
+                        <input type="text" placeholder="Enter Your Contact No."><br>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Write Something "></textarea>
+                    </form>
+                    <button class="btnf">Submit</button>
+                </div>
+            </div>          
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d117970.80478722343!2d88.33269759999999!3d22.482124799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a027248725b94fb%3A0x7c47efef57a90c8a!2sSrikhanda%2C%20Panchpota%2C%20Kolkata%2C%20West%20Bengal!3m2!1d22.4578266!2d88.4223313!5e0!3m2!1sen!2sin!4v1663103161643!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer section  -->
+    <footer>
+        <div class="footer">
+            
+            <div class="footerpic">
+                <img src="./footer coffee .png" alt="">
+            </div>
+            <div class="footercostumer">
+                <div class="footerbox">
+                    <h3>Costumer care</h3>
+                    <li>feedback</li>
+                    <li>Service</li>
+                    <li>Care Center</li>
+                </div>
+
+                <div class="footerbox">
+                    <h3>About Us</h3>
+                    <li>Selling</li>
+                    <li>Best Coffe Provider</li>
+                    <li>Learn more</li>
+                </div>
+                <div class="footerbox">
+                    <h3>Career</h3>
+                    <li>Hiring</li>
+                    <li>Opportunities</li>
+                    <li>Internship</li>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="loginsec hidden" id="pop">
+        <div class="popupbox">
+            <div class="loginhead">
+                <h1>Login</h1>
+            </div>
+            <div class="login">
+                <form action="">
+                    <input type="email" placeholder="Enter your email"><br>
+                    <input type="password" placeholder="....."><br>
+                </form>
+                <button class="btnf" id="submit">Login</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let btnLogin = document.getElementById("pop")
+        setTimeout(function(){
+            btnLogin.classList.remove("hidden")
+            btnLogin.classList.add("show")
+            
+        },2000)
+        let btnsubmit = document.getElementById("submit")
+        btnsubmit.onclick = function(){
+            // let btnLogin = document.getElementById("pop")
+            btnLogin.classList.remove("show")
+            btnLogin.classList.add("hidden")            
+        }
+    </script>
+</body>
+</html>
